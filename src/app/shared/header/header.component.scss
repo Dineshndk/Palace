@@ -1,0 +1,56 @@
+.scHeaderNav{
+    height: 100px;
+    background-color: hsla(210.86,44.3%,15.49%, 1);
+    color: #a3b8ba;
+    align-items: center;
+}
+
+.scNavItem {
+    margin-left: 10px;
+    color: #d1d9e2 !important;
+    cursor: pointer;
+    display: inline-block;
+    padding-bottom:2px;
+    background-image: linear-gradient(#f2f992 0 0);
+    background-position: 0 100%; /*OR bottom left*/
+    background-size: 0% 2px;
+    background-repeat: no-repeat;
+    transition:
+      background-size 0.3s,
+      background-position 0s 0.3s; /*change after the size immediately*/
+      text-decoration: auto;
+  }
+  
+  .scNavItem:hover {
+    background-position: 100% 100%; /*OR bottom right*/
+    background-size: 100% 2px;
+  }
+
+.scBtnReserve{
+    background-color: transparent;
+    display:inline-block;
+    border:1px solid #c88256;
+    color: #c88256;
+  
+    background-image: 
+      linear-gradient(to top, rgb(255, 136, 0) 50%, transparent 50%),
+      linear-gradient(to top, yellow 50%, transparent 50%);
+     
+    background-size: 100% 200%;
+    background-position: top;
+    transition: background-position 0.5s ease-in-out;
+}
+  
+.scBtnReserve:hover {
+    background-position: bottom;
+    color: #372216;
+  }
+
+.scTitleName
+{
+    color: #d1d9e2;
+    font-size: 27px;
+}
+.scNavContainer{
+    align-items: center;
+}

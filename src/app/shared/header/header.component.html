@@ -1,0 +1,14 @@
+
+<div class="scHeaderNav d-flex w-100 row" *ngIf="!bIsReservation">
+    <nav class="scNavContainer align-middle d-flex h-100 float-start col 5">    
+      <div *ngFor="let Item of arMenuItems">
+        <a [attr.href]="Item.URL" class="scNavItem">{{Item.Name}}</a> 
+    </div>
+  </nav>
+  <div class="col-4">
+    <span class="scTitleName">The Palace</span>
+  </div>
+  <div class="scRight px-3 col-3">
+    <button type="button" class="btn float-end scBtnReserve" (click)="makeReservation()"> Make a reservation </button>
+  </div>
+</div>

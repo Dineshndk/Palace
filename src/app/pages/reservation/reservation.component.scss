@@ -1,0 +1,37 @@
+
+.scRight{
+    float: right;
+  }
+  
+  .scResevHeader{
+    height: 100px;
+  }
+
+  .scReservationCont{
+    top: 100px;
+  }
+
+  .scLeftContainer{
+    width: 55%;
+  }
+  .scFormContainer{
+    width: 45%;
+  }
+  .scFormHeader{
+    font-size: 25px;
+    padding: 10px;
+    color: aliceblue;
+
+  }
+  mat-card{
+    max-width: 400px;
+    margin: 2em auto;
+}
+
+mat-form-field{
+    display: block;
+}
+.scGuestButton{
+  font-size: 17px;
+  margin-left: 5px;
+}
