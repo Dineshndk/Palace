@@ -1,0 +1,5 @@
+{
+    "title": "Mon application",
+    "greeting": "Bonjour, {{name}} !",
+    "click_me": "Cliquez ici"
+  }

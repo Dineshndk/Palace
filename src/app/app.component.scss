@@ -1,0 +1,14 @@
+.MainContainer{
+  height: calc(100% - 100px);
+}
+
+.scRight{
+  float: right;
+}
+
+.scChatUsBtn{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1;
+}

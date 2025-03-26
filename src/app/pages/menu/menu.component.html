@@ -1,0 +1,19 @@
+<div class="d-flex">    
+    <div class="col-10">
+        <p>{{ 'greeting' | translate:{ name: name } }}</p>
+    </div>
+    <div class="col-2" style="float: right;">
+        <mat-select (selectionChange)="switchLanguage($event)" style="width: 100px;background-color: red;">
+            <mat-option *ngFor="let lang of arLanguage" value="{{lang?.value}}">{{lang?.value}}</mat-option>    
+        </mat-select>
+    </div>
+</div>
+<div style="width: 80%;height: 350px;">
+    <!-- <carousel
+    [images]="images"
+    [cellsToShow]="1"
+    [loop]="true"
+    [autoplay]="true"
+    [autoplayInterval]="3000"
+    ></carousel> -->
+</div>

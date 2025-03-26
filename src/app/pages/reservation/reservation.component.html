@@ -1,0 +1,51 @@
+<div class="w-100">
+    <div class="w-100 col">
+        <div class="p-3 scRight">
+            <button mat type="button" class="btn btn-primary" > Sign up </button>
+            <button mat type="button" class="btn btn-secondary ms-1" > Login </button>
+        </div>
+    </div>
+    <div class="w-100 d-flex">
+        <div class="scLeftContainer">
+            <span> **The palace content here**</span>
+        </div>
+        <div class="scFormContainer">
+        <mat-card>
+            <span class="scFormHeader">The palace</span>
+            <mat-card-content>
+                <form [formGroup] = "ReservationForm" autocomplete="false">
+                    <mat-form-field>
+                        <mat-label>Party size</mat-label>
+                        <input matInput formControlName="PartySize" [(ngModel)]="GuestDisplayValue" readonly>
+
+                        <button matSuffix mat-mini-fab color="accent" class="scGuestButton" (click)="AddGuestCount(false)"
+                        [disabled]="GuestCount==1">
+                            <mat-icon>remove</mat-icon>
+                          </button>
+                        <button matSuffix mat-mini-fab color="accent" class="scGuestButton" (click)="AddGuestCount(true)"
+                            [disabled]="GuestCount==10">
+                            <mat-icon>add</mat-icon>
+                          </button>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Date</mat-label>
+                        <input matInput formControlName="Date" 
+                        [matDatepicker]="reserveAtPicker" (click)="reserveAtPicker.open()">
+                    <mat-datepicker-toggle matSuffix [for]="reserveAtPicker"></mat-datepicker-toggle>
+                    <mat-datepicker #reserveAtPicker></mat-datepicker>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Time</mat-label>
+                        <mat-select>
+                            <mat-option *ngFor="let slot of arSlotTime" value="{{slot?.timeValue}}">{{slot?.time}}</mat-option>    
+                        </mat-select>
+                    </mat-form-field>
+                    
+                    <button type="submit" class="w-100" mat-flat-button color="primary">Search</button>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    </div>
+    
+</div>
