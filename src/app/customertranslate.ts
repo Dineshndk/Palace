@@ -4,14 +4,18 @@ import { HttpClient } from '@angular/common/http';
 import { Observable , forkJoin} from 'rxjs';
 import { map } from 'rxjs/operators';
 
-export class CustomLoader implements TranslateLoader {
-  constructor(private http: HttpClient) {
+import { environment } from 'src/environments/environment';
 
+export class CustomLoader implements TranslateLoader {
+  public sPath:string = "";
+
+  constructor(private http: HttpClient) {
+    this.sPath = environment.production == true ? "/palace/" : "";
   }
   getTranslation(langCountry: string): Observable<any> {
     // Condition satisfies upon page load. com.json is loaded.
     if (!langCountry.includes('_')) {
-      return this.http.get('/assets/i18n/' + langCountry + '.json');
+      return this.http.get(this.sPath + '/assets/i18n/' + langCountry + '.json');
     }
 
     const arr = langCountry.split('_');
