@@ -20,8 +20,8 @@ export class CustomLoader implements TranslateLoader {
 
     const arr = langCountry.split('_');
     return forkJoin(
-      this.http.get('/assets/i18n/' + arr[0] + '.json'),
-      this.http.get('/assets/i18n/' + arr[1] + '/' + langCountry + '.json'))
+      this.http.get(this.sPath + '/assets/i18n/' + arr[0] + '.json'),
+      this.http.get(this.sPath + '/assets/i18n/' + arr[1] + '/' + langCountry + '.json'))
       .pipe(map(data => {
         const res = {};
         data.forEach((obj) => {
